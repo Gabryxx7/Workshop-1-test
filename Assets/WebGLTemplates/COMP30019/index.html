@@ -9,7 +9,14 @@
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
   <body>
-    <div class="page-heading">  <img src="TemplateData/logo.png"/> <div>COMP30019 - Graphics and Interaction</div></div>
+    <div class="page-heading">  <img src="TemplateData/logo.png"/> 
+      <div class="info">
+        <div class="course-info">COMP30019 - Graphics and Interaction</div>
+        #if PAGE_TITLE
+          <div class="game-title">{{{ PAGE_TITLE }}}</div>
+        #endif
+    </div>
+  </div>
     <div class="game-container {{{ SPLASH_SCREEN_STYLE.toLowerCase() }}}">
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas"></canvas>
